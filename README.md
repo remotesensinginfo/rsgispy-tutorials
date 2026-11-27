@@ -47,6 +47,7 @@ data.
 | | [02_unsupervised_classification](04_image_classification/02_unsupervised_classification.ipynb) | Clustering with K-means, mean shift and other algorithms, and applying a fitted clusterer to another image | ~1 min |
 | | [03_supervised_pixel_classification](04_image_classification/03_supervised_pixel_classification.ipynb) | Training samples, a random forest and applying it to an image | ~2 min |
 | | [04_object_based_classification](04_image_classification/04_object_based_classification.ipynb) | Segmentation and classifying segments | ~1 min |
+| | [05_mangrove_classification_interpretation](04_image_classification/05_mangrove_classification_interpretation.ipynb) | Mangrove indices, feature selection (VIF, BorutaShap, RFECV), an optimised XGBoost classifier, and interpreting it with permutation importance, SHAP, Sobol sensitivity (SALib) and response curves | ~3 min |
 | **5. Regression** | [01_intro_and_explore_data](05_regression/01_intro_and_explore_data.ipynb) | A forest inventory regression problem, explored with lidar metrics | ~1 min |
 | | [02_feature_selection](05_regression/02_feature_selection.ipynb) | Selecting features with VIF, correlation, CQV and LassoLars | ~1 min |
 | | [03_simple_linear_regression](05_regression/03_simple_linear_regression.ipynb) | A simple linear regression, applied to an image | ~1 min |
