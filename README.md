@@ -68,8 +68,11 @@ data.
 | | [03_landsat_composite_bathymetry](10_case_study_icesat2_bathymetry/03_landsat_composite_bathymetry.ipynb) | A bathymetry map from a composite and ICESat-2 depths | ~1 min |
 | | [04_landsat_scenes_bathymetry](10_case_study_icesat2_bathymetry/04_landsat_scenes_bathymetry.ipynb) | Bathymetry from individual scenes, combined | ~1 min |
 | | [05_cshelph_bathymetry](10_case_study_icesat2_bathymetry/05_cshelph_bathymetry.ipynb) | *Optional:* classifying ICESat-2 photons with C-SHELPh | needs data |
-| **11. Case study: species distribution modelling** | [01_prepare_datasets](11_case_study_species_distribution/01_prepare_datasets.ipynb) | Preparing sightings and environmental layers | ~1 min |
-| | [02_species_distribution_modelling](11_case_study_species_distribution/02_species_distribution_modelling.ipynb) | Pseudo-absences, model fitting, evaluation and habitat suitability | ~1 min |
+| **11. Case study: species distribution modelling** | [01_prepare_datasets](11_case_study_species_distribution/01_prepare_datasets.ipynb) | Cleaning and thinning species records, and choosing habitat variables from the species' ecology | < 1 min |
+| | [02_species_distribution_modelling](11_case_study_species_distribution/02_species_distribution_modelling.ipynb) | A logistic regression SDM: collinearity, spatial cross-validation, AUC/TSS/Boyce, null models, response curves, jackknife, SHAP and Sobol interpretation, uncertainty, extrapolation (MESS/ExDet) and a warming scenario | ~2 min |
+| | [03_maxent_species_distribution_modelling](11_case_study_species_distribution/03_maxent_species_distribution_modelling.ipynb) | A MaxEnt SDM: feature classes, regularisation tuning (spatial CV and AICc), clamping | ~2 min |
+| | [04_random_forest_species_distribution_modelling](11_case_study_species_distribution/04_random_forest_species_distribution_modelling.ipynb) | A random forest SDM: tuning, over-fitting and spatial CV, tree-based interpretation | ~2 min |
+| | [05_compare_sdm_models](11_case_study_species_distribution/05_compare_sdm_models.ipynb) | Comparing the logistic regression, MaxEnt and random forest SDMs: accuracy, maps, consensus, responses, importance and projections | < 1 min |
 | **12. Downloading data** | [01_dwnld_usgs_landsat_scenes](12_downloading_data/01_dwnld_usgs_landsat_scenes.ipynb) | Landsat scenes from the USGS (M2M API) | account |
 | | [02_nasa_cmr_download_icesat2](12_downloading_data/02_nasa_cmr_download_icesat2.ipynb) | ICESat-2 data from NASA's CMR | account |
 | | [03_nasa_cmr_download_gedi](12_downloading_data/03_nasa_cmr_download_gedi.ipynb) | GEDI data from NASA's CMR | account |
