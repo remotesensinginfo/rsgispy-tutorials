@@ -5,7 +5,7 @@ a pure-Python library for remote sensing and GIS data processing built on
 rasterio, GeoPandas, NumPy and scikit-learn. The tutorials start with
 reading an image and calculating an index, and build up to classification,
 regression, change detection, spectral unmixing, hydrology, chained
-tile-graph workflows and two case studies.
+tile-graph workflows and three case studies.
 
 The tutorials are a port of the
 [RSGISLib tutorials](https://github.com/remotesensinginfo/rsgislib-tutorials)
@@ -69,9 +69,9 @@ data.
 | | [04_landsat_scenes_bathymetry](10_case_study_icesat2_bathymetry/04_landsat_scenes_bathymetry.ipynb) | Bathymetry from individual scenes, combined | ~1 min |
 | | [05_cshelph_bathymetry](10_case_study_icesat2_bathymetry/05_cshelph_bathymetry.ipynb) | *Optional:* classifying ICESat-2 photons with C-SHELPh | needs data |
 | **11. Case study: species distribution modelling** | [01_prepare_datasets](11_case_study_species_distribution/01_prepare_datasets.ipynb) | Cleaning and thinning species records, and choosing habitat variables from the species' ecology | < 1 min |
-| | [02_species_distribution_modelling](11_case_study_species_distribution/02_species_distribution_modelling.ipynb) | A logistic regression SDM: collinearity, spatial cross-validation, AUC/TSS/Boyce, null models, response curves, jackknife, SHAP and Sobol interpretation, uncertainty, extrapolation (MESS/ExDet) and a warming scenario | ~2 min |
-| | [03_maxent_species_distribution_modelling](11_case_study_species_distribution/03_maxent_species_distribution_modelling.ipynb) | A MaxEnt SDM: feature classes, regularisation tuning (spatial CV and AICc), clamping | ~2 min |
-| | [04_random_forest_species_distribution_modelling](11_case_study_species_distribution/04_random_forest_species_distribution_modelling.ipynb) | A random forest SDM: tuning, over-fitting and spatial CV, tree-based interpretation | ~2 min |
+| | [02_species_distribution_modelling](11_case_study_species_distribution/02_species_distribution_modelling.ipynb) | A logistic regression SDM: collinearity, spatial cross-validation, AUC/TSS/Boyce, null models, response curves, jackknife, SHAP and Sobol interpretation, uncertainty, extrapolation (MESS/ExDet) and a warming scenario | ~3.5 min |
+| | [03_maxent_species_distribution_modelling](11_case_study_species_distribution/03_maxent_species_distribution_modelling.ipynb) | A MaxEnt SDM: feature classes, regularisation tuning (spatial CV and AICc), clamping | ~5 min |
+| | [04_random_forest_species_distribution_modelling](11_case_study_species_distribution/04_random_forest_species_distribution_modelling.ipynb) | A random forest SDM: tuning, over-fitting and spatial CV, tree-based interpretation | ~5 min |
 | | [05_compare_sdm_models](11_case_study_species_distribution/05_compare_sdm_models.ipynb) | Comparing the logistic regression, MaxEnt and random forest SDMs: accuracy, maps, consensus, responses, importance and projections | < 1 min |
 | **12. Downloading data** | [01_dwnld_usgs_landsat_scenes](12_downloading_data/01_dwnld_usgs_landsat_scenes.ipynb) | Landsat scenes from the USGS (M2M API) | account |
 | | [02_nasa_cmr_download_icesat2](12_downloading_data/02_nasa_cmr_download_icesat2.ipynb) | ICESat-2 data from NASA's CMR | account |
@@ -81,11 +81,17 @@ data.
 | | [06_copernicus_odata_sen2](12_downloading_data/06_copernicus_odata_sen2.ipynb) | Sentinel-2 from the Copernicus Data Space | account |
 | | [07_planet_psscene](12_downloading_data/07_planet_psscene.ipynb) | PlanetScope scenes from the Planet API | account |
 | | [08_icepyx_download_icesat2](12_downloading_data/08_icepyx_download_icesat2.ipynb) | ICESat-2 ATL03 data with icepyx (used by 10.05) | account |
+| **13. Case study: wetland mapping (TropWet)** | [01_composite_and_endmembers](13_case_study_wetland_mapping/01_composite_and_endmembers.ipynb) | A Landsat median composite, the NDVI / MNDWI feature space, automatic TropWet endmember selection and checking it (a bright sand endmember) | < 1 min |
+| | [02_unmixing_and_classification](13_case_study_wetland_mapping/02_unmixing_and_classification.ipynb) | Comparing the UCLS / NNLS / FCLS solvers and the endmember sets by their error, a per-pixel model choice (MESMA), the burn correction, the TropWet classes and their sensitivity to the class limits | < 1 min |
+| | [03_change_and_accuracy](13_case_study_wetland_mapping/03_change_and_accuracy.ipynb) | Classifying each date, wetland change 1997–2018 (from–to table, gain / loss map) and checking the classes against reference polygons | < 1 min |
 
 Run times are from a recent laptop (Apple M2 Max). The notebooks in
 section 12 need a user account with each data provider. They read the login
-details from a credentials file you create, as each notebook explains, and
-they come last because the earlier sections use the data in `data/`. The
+details from a credentials file you create, as each notebook explains; none
+of the other sections need them, because they use the data in `data/`.
+Section 13 builds on the rsgispy guide
+[Spectral unmixing for wetland mapping (TropWet)](https://rsgispy.readthedocs.io/en/latest/guides/spectral_unmixing.html)
+and uses the Landsat images of section 6. The
 C-SHELPh notebook needs the optional `cshelph` package and the ICESat-2 data
 downloaded by `12_downloading_data/08_icepyx_download_icesat2`.
 
