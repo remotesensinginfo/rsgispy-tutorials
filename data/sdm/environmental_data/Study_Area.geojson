@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "Study_Area",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::27700" } },
+"features": [
+{ "type": "Feature", "properties": { }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 257256.920832, 352383.036549 ], [ 257602.935754, 363873.99927 ], [ 272395.486659, 363451.140021 ], [ 272084.971872, 351959.736243 ], [ 257256.920832, 352383.036549 ] ] ] } }
+]
+}

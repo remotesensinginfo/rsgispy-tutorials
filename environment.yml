@@ -1,0 +1,42 @@
+name: rsgispy-tutorials
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - pip
+  # Core geospatial stack (rsgispy's dependencies)
+  - gdal
+  - rasterio
+  - geopandas
+  - pyogrio
+  - pyproj
+  - shapely
+  - numpy
+  - pandas
+  - scipy
+  - tqdm
+  # Machine learning and statistics
+  - scikit-learn
+  - xgboost
+  - optuna
+  - statsmodels
+  - pyarrow
+  - numba
+  - tbb  # thread-safe numba threading layer for parallel tiles
+  # Maps and plots
+  - matplotlib
+  - seaborn
+  - contextily
+  # Running the notebooks
+  - jupyterlab
+  - nbclient
+  - nbformat
+  - ipykernel
+  - pip:
+      # rsgispy from GitHub until the release that includes the tile-graph
+      # improvements used here is on PyPI; then use
+      # "rsgispy[classification,regression,xgboost,mapping,dataaccess,stats,vector,modelling,numba]"
+      - "rsgispy[classification,regression,xgboost,mapping,dataaccess,stats,vector,modelling,numba] @ git+https://github.com/remotesensinginfo/rsgispy.git@main"
+      # Optional: only the ICESat-2 download and C-SHELPh notebooks need these
+      # - icepyx
+      # - cshelph
