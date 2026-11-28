@@ -33,10 +33,10 @@ dependencies:
   - nbformat
   - ipykernel
   - pip:
-      # rsgispy from GitHub until the release that includes the tile-graph
-      # improvements used here is on PyPI; then use
-      # "rsgispy[classification,regression,xgboost,mapping,dataaccess,stats,vector,modelling,numba]"
-      - "rsgispy[classification,regression,xgboost,mapping,dataaccess,stats,vector,modelling,numba] @ git+https://github.com/remotesensinginfo/rsgispy.git@main"
+      # The notebooks need rsgispy 0.5.1 or later. rsgispy from GitHub until
+      # that release is on PyPI; then use
+      # "rsgispy[classification,regression,xgboost,mapping,dataaccess,stats,vector,modelling,unmixing,numba]>=0.5.1"
+      - "rsgispy[classification,regression,xgboost,mapping,dataaccess,stats,vector,modelling,unmixing,numba] @ git+https://github.com/remotesensinginfo/rsgispy.git@main"
       # Optional: only the ICESat-2 download and C-SHELPh notebooks need these
       # - icepyx
       # - cshelph
