@@ -13,8 +13,8 @@ to rsgispy, reorganised so that each section builds on the ones before it.
 
 ## Installation
 
-Create the conda environment (it installs rsgispy and everything the
-notebooks use), then start JupyterLab:
+The notebooks need **rsgispy 0.5.1** or later. Create the conda environment
+(it installs rsgispy and everything the notebooks use), then start JupyterLab:
 
 ```bash
 conda env create -f environment.yml
@@ -85,6 +85,9 @@ data.
 | **13. Case study: wetland mapping (TropWet)** | [01_composite_and_endmembers](13_case_study_wetland_mapping/01_composite_and_endmembers.ipynb) | A Landsat median composite, the NDVI / MNDWI feature space, automatic TropWet endmember selection and checking it (a bright sand endmember) | < 1 min |
 | | [02_unmixing_and_classification](13_case_study_wetland_mapping/02_unmixing_and_classification.ipynb) | Comparing the UCLS / NNLS / FCLS solvers and the endmember sets by their error, a per-pixel model choice (MESMA), the burn correction, the TropWet classes and their sensitivity to the class limits | < 1 min |
 | | [03_change_and_accuracy](13_case_study_wetland_mapping/03_change_and_accuracy.ipynb) | Classifying each date, wetland change 1997–2018 (from–to table, gain / loss map) and checking the classes against reference polygons | < 1 min |
+| | [04_finding_endmembers](13_case_study_wetland_mapping/04_finding_endmembers.ipynb) | Estimating the number of endmembers (HySime, HFC), extracting them from the image (ATGP, VCA, N-FINDR, PPI) and comparing the results with the published method | ~1 min |
+| | [05_mesma_and_comparison](13_case_study_wetland_mapping/05_mesma_and_comparison.ipynb) | A spectral library from the pure pixels, library pruning (EAR, MASA, CoB, IES), MESMA, AutoMCU fraction uncertainty and a comparison with the published method | ~4 min |
+| | [06_endmember_sensitivity](13_case_study_wetland_mapping/06_endmember_sensitivity.ipynb) | How sensitive the published method is to the endmember selection: a bootstrap of the pure pixels, one-at-a-time and Sobol (SALib) sensitivity analysis of the selection rules, and the spread between methods | ~6 min |
 
 Run times are from a recent laptop (Apple M2 Max). The notebooks in
 section 12 need a user account with each data provider. They read the login
